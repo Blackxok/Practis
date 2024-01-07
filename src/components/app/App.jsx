@@ -1,14 +1,14 @@
-import { Box } from "@mui/material";
 import React from "react";
+import { Box } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
-import { Channel, Main } from "..";
+import { Home, Channel } from "../index";
 
 function App() {
    return (
       <Box>
          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/" element={<Channel />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/channel" element={<Channel />} />
          </Routes>
       </Box>
    );
