@@ -1,12 +1,15 @@
 import React from "react";
+import "./Navbar.css";
 import { Stack } from "@mui/material";
-import { logo } from "../../constant";
+import { logo4 } from "../../constant";
+import { Link } from "react-router-dom";
 
 function Navbar() {
    return (
-      <Stack>
-         <img src={logo} alt="logo" width={150} height={150} />
-         <img src="../../assets/8.png" alt="" width={150} height={150} />
+      <Stack className="container">
+         <Link to={"/"}>
+            <img src={logo4} alt="logo" className="imgLogo" />
+         </Link>
       </Stack>
    );
 }
