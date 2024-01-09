@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { Stack } from "@mui/material";
-import { logo4 } from "../../constant";
+import { Search, logo4 } from "../../constant";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -10,6 +10,7 @@ function Navbar() {
          <Link to={"/"}>
             <img src={logo4} alt="logo" className="imgLogo" />
          </Link>
+         <Search />
       </Stack>
    );
 }
