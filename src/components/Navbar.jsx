@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { Stack } from "@mui/material";
-import { Search, logo4 } from "../../constant";
+import { Search, logo4 } from "../constant";
 import { Link } from "react-router-dom";
 
 function Navbar() {
