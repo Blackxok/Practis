@@ -1,7 +1,5 @@
-import { Paper } from "@mui/material";
-import { search_Icon } from "../constant";
 import React from "react";
-import "./Search.css";
+import { Paper } from "@mui/material";
 
 function SearchB() {
    return (

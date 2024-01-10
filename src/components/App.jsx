@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "../index";
+import { Navbar } from "../constants/index";
 
 function App() {
    return (
