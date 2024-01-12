@@ -8,9 +8,9 @@ function Navbar() {
    return (
       <Stack className="container">
          <Link to={"/"}>
-            <img src={Log} alt="Logo" />
+            <img className="imgLogo" src={Log} alt="Logo" />
          </Link>
-         <Search sx={{ color: "red" }} />
+         <Search className="searchIcon" />
       </Stack>
    );
 }
