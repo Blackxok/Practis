@@ -10,7 +10,10 @@ function Navbar() {
          <Link to={"/"}>
             <img className="imgLogo" src={Log} alt="Logo" />
          </Link>
-         <Search className="searchIcon" />
+         <Search
+            className="searchIcon"
+            sx={{ fontSize: `calc(var(--size) * 2)` }}
+         />
       </Stack>
    );
 }

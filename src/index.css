@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+
 :root {
    --size: calc(1vw + 1vh);
    --rang1: #137cd1;
@@ -54,18 +56,38 @@
 .searchIcon {
    color: black;
 }
+
 /* NAVBAR END */
 /* CATEGORY */
 .Category_container {
    width: 100%;
-   height: calc(var(--size) * 3.3);
+   height: calc(var(--size) * 2);
    display: flex;
    align-items: center;
+   /* justify-content: center; */
    flex-direction: row !important;
 }
-.Category_container .ctgr {
+
+.ctgr {
+   width: 100%;
+   height: calc(var(--size) * 2);
+   border: 1px solid rgb(123, 123, 123);
    display: flex;
    align-items: center;
-   flex-direction: row !important;
+}
+.ctgr span {
+   font-size: calc(var(--size) * 0.9);
+   padding: 0 5px;
+   font-family: "Salsa", cursive;
+   font-weight: 500;
+}
+.ctgr div {
+   display: flex;
+   align-items: center;
+   padding: 0 5px;
+   color: rgb(87, 87, 87);
+}
+.ctgr div *{
+   font-size: calc(var(--size) * 1);
 }
 /* CATEGORY END */
