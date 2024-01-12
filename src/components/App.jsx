@@ -1,10 +1,12 @@
 import React from "react";
-import { Navbar } from "../constants/index";
+import Navbar from "./Navbar";
+import Category from "./Category";
 
 function App() {
    return (
       <div>
          <Navbar />
+         <Category />
       </div>
    );
 }
