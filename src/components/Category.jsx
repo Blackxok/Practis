@@ -30,20 +30,18 @@ function Category() {
       { name: "Music", icon: <MusicNote /> },
       { name: "Auto", icon: <Directions /> },
       { name: "Tecno", icon: <Devices /> },
-      { name: "Enginer", icon: <Engineering /> },
+      { name: "Engineer", icon: <Engineering /> },
       { name: "Funny", icon: <EmojiEmotions /> },
    ];
 
    return (
       <div className="Category_container">
-         {categorys.map((item) => {
-            return (
-               <button key={item.name} className="ctgr">
-                  <span>{item.name}</span>
-                  <div>{item.icon}</div>
-               </button>
-            );
-         })}
+         {categorys.map((item) => (
+            <button key={item.name} className="ctgr">
+               <span>{item.name}</span>
+               <div>{item.icon}</div>
+            </button>
+         ))}
       </div>
    );
 }

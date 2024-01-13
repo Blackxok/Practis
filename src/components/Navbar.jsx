@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack } from "@mui/material";
+import { Box, Paper, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Search } from "@mui/icons-material";
 import { Log } from "../constants";
@@ -10,10 +10,15 @@ function Navbar() {
          <Link to={"/"}>
             <img className="imgLogo" src={Log} alt="Logo" />
          </Link>
-         <Search
-            className="searchIcon"
-            sx={{ fontSize: `calc(var(--size) * 2)` }}
-         />
+         <Box className="poiskBar">
+            <Paper className="inputPaper">
+               <input type="text" className="inputSame"/>
+            </Paper>
+            <Search
+               className="searchIcon"
+               sx={{ fontSize: `calc(var(--size) * 2)` }}
+            />
+         </Box>
       </Stack>
    );
 }
