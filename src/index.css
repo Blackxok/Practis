@@ -36,6 +36,7 @@
 }
 
 .searchIcon {
+   cursor: pointer;
    color: rgb(52, 52, 52);
 }
 /* SEARCH END */
@@ -61,7 +62,6 @@
    height: calc(var(--size) * 2);
    display: flex;
    align-items: center;
-   /* justify-content: center; */
    flex-direction: row !important;
 }
 
