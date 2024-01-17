@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
    Home,
    LiveTv,
@@ -17,8 +17,7 @@ import {
 } from "@mui/icons-material";
 import { useState } from "react";
 
-function Category() {
-   //
+function Category({ giveData }) {
    // CATEGORYS
    const categorys = [
       { name: "Live", icon: <CellTower /> },
@@ -37,9 +36,16 @@ function Category() {
       { name: "Funny", icon: <EmojiEmotions /> },
    ];
    // CATEGORYS
-   //
-   const [selectC, setSelectC] = useState("");
 
+   // SELECTED CATEGORY
+   const [selectC, setSelectC] = useState(categorys[0].name);
+
+   // SENDING VALUE
+   useEffect(() => {
+      giveData(selectC);
+   }, [selectC]);
+
+   // COMPONENT RETURN
    return (
       <div className="Category_container">
          {categorys.map((item) => (
