@@ -18,6 +18,8 @@ import {
 import { useState } from "react";
 
 function Category() {
+   //
+   // CATEGORYS
    const categorys = [
       { name: "Live", icon: <CellTower /> },
       { name: "New", icon: <Home /> },
@@ -34,7 +36,8 @@ function Category() {
       { name: "Engineer", icon: <Engineering /> },
       { name: "Funny", icon: <EmojiEmotions /> },
    ];
-
+   // CATEGORYS
+   //
    const [selectC, setSelectC] = useState("");
 
    return (
