@@ -1,15 +1,13 @@
-import React from "react";
 import Navbar from "./Navbar";
 import Category from "./Category";
 import Home from "./Home";
 import { CatContext } from "./context/context";
 
-function App() {
 
-   
+function App() {
    return (
       <div>
-         <CatContext.Provider>
+         <CatContext.Provider value={"hello"}>
             <Navbar />
             <Category />
             <Home />
