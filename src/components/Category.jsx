@@ -15,6 +15,7 @@ import {
    Engineering,
    EmojiEmotions,
 } from "@mui/icons-material";
+import { useState } from "react";
 
 function Category() {
    const categorys = [
@@ -34,10 +35,18 @@ function Category() {
       { name: "Funny", icon: <EmojiEmotions /> },
    ];
 
+   const [selectC, setSelectC] = useState("");
+
    return (
       <div className="Category_container">
          {categorys.map((item) => (
-            <button key={item.name} className="ctgr">
+            <button
+               key={item.name}
+               className={`ctgr ${selectC === item.name && "active"}`}
+               onClick={() => {
+                  setSelectC(item.name);
+               }}
+            >
                <span>{item.name}</span>
                <div>{item.icon}</div>
             </button>
