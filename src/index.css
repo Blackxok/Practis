@@ -113,3 +113,9 @@
    font-size: calc(var(--size) * 1);
 }
 /* CATEGORY END */
+
+/* HOME */
+.Home_container {
+   padding: 0 100px;
+}
+/* HOME END*/
