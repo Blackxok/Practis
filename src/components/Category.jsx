@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
    Home,
    LiveTv,
@@ -15,9 +15,10 @@ import {
    Engineering,
    EmojiEmotions,
 } from "@mui/icons-material";
+import { useState } from "react";
 
-function Category() {
-   //   data Category
+function Category({ giveData }) {
+   // CATEGORYS
    const categorys = [
       { name: "Live", icon: <CellTower /> },
       { name: "New", icon: <Home /> },
@@ -34,22 +35,25 @@ function Category() {
       { name: "Engineer", icon: <Engineering /> },
       { name: "Funny", icon: <EmojiEmotions /> },
    ];
-   //   data Category
-   // const ceckActive = (e) => {
-   //    console.log(e.target);
-   // };
-   function ceckActive(params) {
-      console.log(params);
-   }
+   // CATEGORYS
 
+   // SELECTED CATEGORY
+   const [selectC, setSelectC] = useState(categorys[0].name);
+
+   // SENDING VALUE
+   useEffect(() => {
+      giveData(selectC);
+   }, [selectC]);
+
+   // COMPONENT RETURN
    return (
       <div className="Category_container">
          {categorys.map((item) => (
             <button
                key={item.name}
-               className="ctgr"
-               onClick={(ev) => {
-                  ceckActive(ev);
+               className={`ctgr ${selectC === item.name && "active"}`}
+               onClick={() => {
+                  setSelectC(item.name);
                }}
             >
                <span>{item.name}</span>
