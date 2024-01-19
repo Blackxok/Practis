@@ -17,6 +17,7 @@ import {
 } from "@mui/icons-material";
 
 function Category() {
+   //   data Category
    const categorys = [
       { name: "Live", icon: <CellTower /> },
       { name: "New", icon: <Home /> },
@@ -33,11 +34,24 @@ function Category() {
       { name: "Engineer", icon: <Engineering /> },
       { name: "Funny", icon: <EmojiEmotions /> },
    ];
+   //   data Category
+   // const ceckActive = (e) => {
+   //    console.log(e.target);
+   // };
+   function ceckActive(params) {
+      console.log(params);
+   }
 
    return (
       <div className="Category_container">
          {categorys.map((item) => (
-            <button key={item.name} className="ctgr">
+            <button
+               key={item.name}
+               className="ctgr"
+               onClick={(ev) => {
+                  ceckActive(ev);
+               }}
+            >
                <span>{item.name}</span>
                <div>{item.icon}</div>
             </button>
