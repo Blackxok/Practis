@@ -119,3 +119,28 @@
    padding: 0 100px;
 }
 /* HOME END*/
+
+/* VIDEOS */
+.Videos_Container {
+   width: 100%;
+   flex-direction: row !important;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+}
+/* VIDEOS */
+
+.item_Box {
+   margin: 15px;
+}
+
+/* VIDEOCARD */
+.VideoCard_container {
+   border-radius: 10px !important;
+   flex-wrap: wrap;
+}
+/* CARD MEDIA */
+.CardMedia {
+   width: calc(var(--size) * 10);
+   height: calc(var(--size) * 10);
+}
