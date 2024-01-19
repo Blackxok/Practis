@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;400;600;800&display=swap");
 :root {
    --size: calc(1vw + 1vh);
    --rang1: #137cd1;
@@ -116,7 +116,13 @@
 
 /* HOME */
 .Home_container {
-   padding: 0 100px;
+   padding: 0 calc(var(--size) * 4);
+}
+
+.home_title {
+   font-size: calc(var(--size) * 2);
+   font-family: "Libre Franklin", sans-serif !important;
+   margin: calc(var(--size) * 1);
 }
 /* HOME END*/
 
@@ -126,7 +132,7 @@
    flex-direction: row !important;
    flex-wrap: wrap;
    align-items: center;
-   justify-content: space-between;
+   justify-content: space-evenly;
 }
 /* VIDEOS */
 
@@ -136,11 +142,56 @@
 
 /* VIDEOCARD */
 .VideoCard_container {
+   width: calc(var(--size) * 13);
+   height: calc(var(--size) * 20);
    border-radius: 10px !important;
    flex-wrap: wrap;
 }
 /* CARD MEDIA */
 .CardMedia {
-   width: calc(var(--size) * 10);
+   width: calc(var(--size) * 13);
    height: calc(var(--size) * 10);
+}
+
+.card_content {
+   width: calc(var(--size) * 13);
+   height: calc(var(--size) * 10);
+   padding: calc(var(--size) * 0.8) !important;
+}
+
+.card_content * {
+   font-family: "Libre Franklin", sans-serif !important;
+}
+
+.video_moment {
+   display: flex;
+   flex-direction: row !important;
+   align-items: center;
+   justify-content: space-between;
+   font-size: calc(var(--size) * 0.7) !important;
+   /* opacity: 0.5; */
+}
+.video_title {
+   font-size: calc(var(--size) * 0.9) !important;
+   font-weight: bold !important;
+   line-height: calc(var(--size) * 1) !important;
+}
+
+.video_description {
+   font-size: calc(var(--size) * 0.7) !important;
+   line-height: calc(var(--size) * 0.9) !important;
+   margin: 5px 0 !important;
+}
+
+.chanel_avatar {
+   flex-direction: row !important;
+   align-items: center;
+}
+
+.chanel_avatar .ava {
+   margin: 0 15px 0 0;
+}
+
+.chnl_title {
+   font-size: calc(var(--size) * 0.7);
 }

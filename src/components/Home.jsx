@@ -18,7 +18,7 @@ const Home = () => {
    // returnS
    return (
       <div className="Home_container">
-         <h1>{contextD}</h1>
+         <h1 className="home_title">{contextD}</h1>
          <Videos APIdata={APIdata} />
       </div>
    );
