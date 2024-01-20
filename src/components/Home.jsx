@@ -6,12 +6,12 @@ const Home = () => {
    // consts
    const contextD = useContext(CatContext);
    const [getData, setGetData] = useState([]);
+   console.log(getData);
 
    useEffect(() => {
       ApiService.fetching("search").then((data) => setGetData(data));
    }, []);
 
-   console.log(getData);
    // returnS
    return (
       <div className="Home_container">
