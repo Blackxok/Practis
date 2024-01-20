@@ -1,21 +1,25 @@
 import { useContext, useEffect, useState } from "react";
 import { CatContext } from "./context/context";
 import { ApiService } from "./server/serverData";
+import Videos from "./Videos";
 
 const Home = () => {
    // consts
    const contextD = useContext(CatContext);
-   const [getData, setGetData] = useState([]);
-   console.log(getData);
+   const [APIdata, setAPIdata] = useState([]);
+   // console.log(APIdata);
 
    useEffect(() => {
-      ApiService.fetching("search").then((data) => setGetData(data));
+      ApiService.fetching(`search?part=snippet&q=${contextD}`).then((data) =>
+         setAPIdata(data.data.items)
+      );
    }, []);
 
    // returnS
    return (
       <div className="Home_container">
-         <h1>{contextD}</h1>
+         <h1 className="home_title">{contextD}</h1>
+         <Videos APIdata={APIdata} />
       </div>
    );
 };
