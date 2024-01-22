@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { CatContext } from "./context/context";
 import { ApiService } from "./server/serverData";
 import Videos from "./Videos";
+import { LinearProgress } from "@mui/material";
 
 const Home = () => {
    // consts
@@ -17,10 +18,13 @@ const Home = () => {
 
    // returnS
    return (
-      <div className="Home_container">
-         <h1 className="home_title">{contextD}</h1>
-         <Videos APIdata={APIdata} />
-      </div>
+      <>
+         {!APIdata.length && <LinearProgress className="loader" />}
+         <div className="Home_container">
+            <h1 className="home_title">{contextD}</h1>
+            <Videos APIdata={APIdata} />
+         </div>
+      </>
    );
 };
 

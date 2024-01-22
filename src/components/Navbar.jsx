@@ -12,7 +12,7 @@ function Navbar() {
          </Link>
          <Box className="poiskBar">
             <Paper className="inputPaper">
-               <input type="text" className="inputSame"/>
+               <input type="text" className="inputSame" placeholder="search" />
             </Paper>
             <Search
                className="searchIcon"
