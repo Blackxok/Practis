@@ -4,8 +4,9 @@ import { v4 as uuidv4 } from "uuid";
 import VideoCard from "./VideoCard";
 
 function Videos({ APIdata }) {
-   // console.log(APIdata.length);
+   // console.log(APIdata);
 
+ 
    return (
       <Stack className={"Videos_Container"}>
          {APIdata.map((item) => (
