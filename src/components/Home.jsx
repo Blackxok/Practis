@@ -14,7 +14,7 @@ const Home = () => {
       ApiService.fetching(`search?part=snippet&q=${contextD}`).then((data) =>
          setAPIdata(data.data.items)
       );
-   }, []);
+   }, [contextD]);
 
    // returnS
    return (
