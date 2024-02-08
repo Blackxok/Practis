@@ -11,7 +11,14 @@ import moment from "moment";
 import React from "react";
 
 function VideoCard({ vdata }) {
-   // console.log(vdata);
+   const myArray = vdata?.snippet?.title.split();
+   myArray.filter((e) => {
+      if (e.includes("E")) {
+         console.log(e);
+      } else {
+         console.log("uups");
+      }
+   });
 
    return (
       <Card className="VideoCard_container">
@@ -34,8 +41,13 @@ function VideoCard({ vdata }) {
             </>
             <>
                <Stack className="chanel_avatar">
-                  <Avatar className="ava" src={vdata?.snippet?.thumbnails?.high?.url} />
-                  <Box className="chnl_title">{vdata?.snippet?.channelTitle}</Box>
+                  <Avatar
+                     className="ava"
+                     src={vdata?.snippet?.thumbnails?.high?.url}
+                  />
+                  <Box className="chnl_title">
+                     {vdata?.snippet?.channelTitle}
+                  </Box>
                </Stack>
             </>
          </CardContent>
