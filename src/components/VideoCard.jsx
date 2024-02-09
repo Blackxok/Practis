@@ -11,15 +11,7 @@ import moment from "moment";
 import React from "react";
 
 function VideoCard({ vdata }) {
-   const myArray = vdata?.snippet?.title.split();
-   myArray.filter((e) => {
-      if (e.includes("E")) {
-         console.log(e);
-      } else {
-         console.log("uups");
-      }
-   });
-
+   // console.log(vdata);
    return (
       <Card className="VideoCard_container">
          <CardMedia
