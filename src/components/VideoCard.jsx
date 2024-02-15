@@ -11,11 +11,8 @@ import moment from "moment";
 import React from "react";
 
 function VideoCard({ vdata }) {
-<<<<<<< HEAD
    //
-=======
    // console.log(vdata);
->>>>>>> d731e9673960ddb2576ef19110d4258db74bcc27
    return (
       <Card className="VideoCard_container">
          <CardMedia
