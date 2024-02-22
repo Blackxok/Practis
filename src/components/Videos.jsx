@@ -4,8 +4,6 @@ import VideoCard from "./VideoCard";
 import { Box, Stack } from "@mui/material";
 
 function Videos({ APIdata }) {
-<<<<<<< HEAD
-=======
    const [filteredData, setFilteredData] = useState([]);
 
    useEffect(() => {
@@ -15,7 +13,6 @@ function Videos({ APIdata }) {
       setFilteredData(filteredVideos);
    }, [APIdata]);
 
->>>>>>> 34291e2ad7840fa9211cebb69ece55da4c029c45
    return (
       <Stack className={"Videos_Container"}>
          {filteredData.map((item) => (
