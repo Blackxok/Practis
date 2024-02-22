@@ -43,6 +43,7 @@
 .searchIcon {
    cursor: pointer;
    color: rgb(52, 52, 52);
+   font-size: calc(var(--size) * 1.7) !important;
 }
 /* SEARCH END */
 /* NAVBAR */

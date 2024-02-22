@@ -11,6 +11,7 @@ import moment from "moment";
 import React from "react";
 
 function VideoCard({ vdata }) {
+   //
    // console.log(vdata);
    return (
       <Card className="VideoCard_container">
